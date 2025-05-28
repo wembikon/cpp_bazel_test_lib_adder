@@ -1,0 +1,13 @@
+load("@rules_cc//cc:cc_test.bzl", "cc_test")
+
+cc_test(
+    name = "adder_test",
+    srcs = ["adder_test.cpp"],
+    deps = [
+        "//adder:adder",
+        # To know what targets are available for @boost.test,
+        # run `bazel query 'kind(cc_.*, @boost.test//...)'`.
+        # Make sure to add `#define BOOST_TEST_MODULE <TestName>` to the test file.
+        "@boost.test//:unit_test_main",
+    ],
+)

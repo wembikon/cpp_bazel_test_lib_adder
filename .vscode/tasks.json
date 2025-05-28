@@ -12,6 +12,40 @@
       "group": { "kind": "build", "isDefault": true},
       "problemMatcher": [],
       "detail": "Build Bazel target //adder:adder",
+    },
+    {
+      // Doesn't show how many tests inside the test file are being run.
+      "label": "Execute all tests",
+      "type": "shell",
+      "command": "bazel test //adder/test/...",
+      "group": { "kind": "build"},
+      "problemMatcher": [],
+      "detail": "",
+    },
+    {
+      // Shows how many tests inside the test file are being run.
+      "label": "Run all tests",
+      "type": "shell",
+      "command": "bazel run //adder/test/...",
+      "group": { "kind": "build"},
+      "problemMatcher": [],
+      "detail": "",
+    },
+    {
+      "label": "Execute Test //adder:adder",
+      "type": "shell",
+      "command": "bazel test //adder/test:adder_test",
+      "group": { "kind": "build"},
+      "problemMatcher": [],
+      "detail": "Build Bazel target //adder:adder",
+    },
+    {
+      "label": "Run Test //adder:adder",
+      "type": "shell",
+      "command": "bazel run //adder/test:adder_test",
+      "group": { "kind": "build"},
+      "problemMatcher": [],
+      "detail": "Build Bazel target //adder:adder",
     }
   ]
 }
