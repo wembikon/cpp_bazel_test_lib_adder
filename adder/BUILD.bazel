@@ -1,0 +1,10 @@
+load("@rules_cc//cc:cc_library.bzl", "cc_library")
+
+cc_library(
+    name = "adder",
+    srcs = ["src/adder.cpp"],
+    hdrs = ["pub/adder/adder.h"],
+    includes = ["pub"],
+    deps = [],
+    visibility = ["//visibility:public"],
+)

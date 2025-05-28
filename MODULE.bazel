@@ -1,0 +1,6 @@
+module(
+    name = "cpp_bazel_test_lib_adder",
+    version = "1.0",
+)
+
+bazel_dep(name = "rules_cc", version = "0.0.9")

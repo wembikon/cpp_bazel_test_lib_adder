@@ -1,0 +1,17 @@
+{
+  "version": "2.0.0",
+  "presentation": {
+    "focus": true,
+    "panel": "shared",
+  },
+  "tasks": [
+    {
+      "label": "Bazel Build //adder:adder",
+      "type": "shell",
+      "command": "bazel build //adder:adder",
+      "group": { "kind": "build", "isDefault": true},
+      "problemMatcher": [],
+      "detail": "Build Bazel target //adder:adder",
+    }
+  ]
+}
